@@ -8,7 +8,7 @@ function Item({ producto }) {
             src={producto.thumbnail}
             className="card-img-top"
             alt={producto.title}
-            style={{ height: "200px", objectFit: "cover" }}
+            style={{ height: "300px", objectFit: "cover" }}
             />
             <div className="card-body d-flex flex-column justify-content-between">
             <h5 className="card-title">{producto.title}</h5>

@@ -39,3 +39,19 @@ h1{
   color: #1c373c;
   text-align: center;
 }
+
+.btn{
+  background-color: #1c373c;
+  color: white;
+  border: 1px solid #1c373c;
+  &:hover{
+    background-color: white;
+    color: #1c373c;
+    border: 1px solid #1c373c;
+    font-weight: bold;
+  }
+}
+
+.card{
+  background-color: rgb(161, 173, 173,0.1);
+}
