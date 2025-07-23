@@ -1,13 +1,44 @@
-# React + Vite
+# 🛒 E-Commerce App - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de tienda online desarrollado con **React**. La aplicación permite al usuario explorar un catálogo de productos, agregarlos al carrito y gestionar su compra.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Visualización de productos.
+- Filtrado de productos por categoría.
+- Agregar productos al carrito.
+- Visualización del carrito de compras.
+- Checkout básico (formulario de datos).
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologías y dependencias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# coderhouse_RCT
+- [React Router](https://reactrouter.com/en/main) – Para la navegación entre vistas.
+- [Firebase](https://firebase.google.com/docs) – Para almacenar productos y pedidos.
+- [React Bootstrap](https://react-bootstrap.github.io/) – Para los estilos y componentes UI.
+
+## 📂 Estructura del proyecto
+
+```bash
+src/
+├── components/
+│   ├── ItemListContainer.jsx
+│   ├── ItemDetailContainer.jsx
+│   ├── Cart.jsx
+│   ├── Navbar.jsx
+│   └── ...
+├── firebase/
+│   ├── firebaseConfig.js
+│   └── db.js
+└── App.jsx
+```
+
+## 📦 Instalación
+
+1. Clona el repositorio.
+2. Ejecuta `npm install`.
+3. Configura Firebase en `firebaseConfig.js`.
+4. Ejecuta `npm run dev` para iniciar el servidor local.
+
+## 👤 Autor
+
+Victor Viciana

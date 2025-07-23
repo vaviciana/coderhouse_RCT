@@ -1,17 +1,20 @@
 import cartIcon from '../assets/carrito-de-compras.png';
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext"; 
+import { useNavigate } from 'react-router-dom';
+
 
 function CartWidget() {
+
+    const { cart } = useContext(CartContext);
+    const totalItems = cart.reduce((acc, item) => acc + item.quantity, 0);
+    const navigate = useNavigate()
+
     return (
-                
-                    <div className='d-flex flex-row gap-2 justify-content-end'>
-                        <div className='burbuja' style={{ width: '20px' }}>
-                            <p>3</p>
-                        </div>
-                        <a href="">
-                            <img src={cartIcon} alt="Cart Widget" style={{ width: '40px' }}/>
-                        </a>
-                    </div>
-                
+            <button className='btn d-flex align-items-center justify-content-center' onClick={() => navigate('/cart')}>
+                <h2>{totalItems}</h2>
+                <img src={cartIcon} alt="Cart Widget" style={{ width: '40px' }}/>
+            </button>
 )}
 
 export default CartWidget;

@@ -12,7 +12,7 @@ function Item({ producto }) {
             />
             <div className="card-body d-flex flex-column justify-content-between">
             <h5 className="card-title">{producto.title}</h5>
-            <p className="card-text">${producto.price}</p>
+            <p className="card-text">{producto.price}€</p>
             <Link to={`/item/${producto.id}`} className="btn btn-primary mt-auto">
                 Ver más
             </Link>

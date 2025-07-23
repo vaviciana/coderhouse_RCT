@@ -11,17 +11,17 @@ function Navbar () {
                     <img src={Logo} alt="Logo_EMETEMKT" style={{ width: '80px' }}/>
                 </a>
                 <div className='d-flex flex-row text-center justify-content-center align-items-center items_menu'>
-                    <Link to="/category/mens-shirts">
-                        Camisetas
+                    <Link to="/category/gestion-de-redes">
+                        Gestión de redes
                     </Link>
-                    <Link to="/category/mens-shoes">
-                        Zapatos
+                    <Link to="/category/diseño-web">
+                        Diseño web
                     </Link>
-                    <Link to="/category/mens-watches">
-                        Relojes
+                    <Link to="/category/ad-management">
+                        Ad management
                     </Link>
-                    <Link to="/category/mobile-accessories">
-                        Accesorios para Móviles
+                    <Link to="/category/branding">
+                        Branding
                     </Link>
                 </div>
             </div>

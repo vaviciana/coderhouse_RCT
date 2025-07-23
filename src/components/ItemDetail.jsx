@@ -1,3 +1,5 @@
+import Counter from "./Counter";
+
 function ItemDetail({ producto }) {
     return (
         <div className="container m-2 p-2">
@@ -23,6 +25,7 @@ function ItemDetail({ producto }) {
                 </div>
             </div>
             </div>
+            <Counter item={producto} />
         </div>
         </div>
     );

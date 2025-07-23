@@ -1,23 +1,22 @@
-import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getProductoById } from "../firebase/db";
 import ItemDetail from "./ItemDetail";
 
 function ItemDetailContainer() {
-    const { itemId } = useParams();
     const [producto, setProducto] = useState(null);
+    const { itemId } = useParams();
 
     useEffect(() => {
-        fetch(`https://dummyjson.com/products/${itemId}`)
-        .then((res) => res.json())
-        .then((data) => setProducto(data))
-        .catch((error) => console.error("Error al cargar el producto", error));
+        getProductoById(itemId).then((data) => setProducto(data));
     }, [itemId]);
 
-    if (!producto) {
-        return <p className="text-center">Cargando detalle...</p>;
-    }
-
-    return <ItemDetail producto={producto} />;
+    return (
+        <div className="container mt-4">
+        {producto ? <ItemDetail producto={producto} /> : <p>Cargando...</p>}
+        </div>
+    );
 }
 
 export default ItemDetailContainer;
+

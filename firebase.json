@@ -1,0 +1,8 @@
+{
+  "firestore": {
+    "database": "(default)",
+    "location": "eur3",
+    "rules": "firestoreRules",
+    "indexes": "firestore.indexes.json"
+  }
+}

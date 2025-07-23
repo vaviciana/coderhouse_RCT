@@ -1,23 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
+import { getProductos } from "../firebase/db";
 
 function ItemListContainer({ titulo }) {
     const { categoryName } = useParams();
     const [productos, setProductos] = useState([]);
 
     useEffect(() => {
-        const url = categoryName
-        ? `https://dummyjson.com/products/category/${categoryName}`
-        : 'https://dummyjson.com/products';
-
-        fetch(url)
-        .then((res) => res.json())
-        .then((data) => {
-            const items = data.products || data;
-            setProductos(items);
-        })
-        .catch((error) => console.error("Error al cargar productos", error));
+        getProductos(categoryName).then(data => setProductos(data))
     }, [categoryName]);
 
     return (
